@@ -1,0 +1,41 @@
+#include <iostream>
+#include <fstream> 
+
+using namespace std;
+
+// se define la estructura de datos para almacenar los datos del cliente
+struct Cliente {
+    string nombre;
+    int n.factura;
+    int precio;
+};
+
+int main() {
+
+    // Declarar puntero a estructura de datos Cliente 
+    Cliente *ptr = Cliente;
+
+    // Capturar datos del cliente para la factura
+    cout << "Ingrese el nombre del cliente: ";
+    cin >> ptr->nombre);
+    cout << "Ingrese la direccion del cliente: ";
+    cin >> ptr->n.factura);
+    cout << "Ingrese el telefono del cliente: ";
+    cin >> ptr->precio);
+
+    // Abrir archivo 
+    ofstream archivoFactura("factura.txt");
+
+    // Escribir la factura en el archivo
+    archivoFactura << "FACTURA" << endl;
+    archivoFactura << "Nombre del cliente: " << ptr->nombre << endl;
+    archivoFactura << "numero de factura: " << ptr->n.factura << endl;
+    archivoFactura << "precio a facturare: " << ptr->precio << endl;
+
+    // Cerrar el archivo
+    archivoFactura.close();
+
+
+
+    return 0;
+}
