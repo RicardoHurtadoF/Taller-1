@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cstdlib> 
+#include <ctime>   
+
+using namespace std;
+int generarAleatorio();
+
+int main()
+{
+    int n = 10; // Tamaño del array
+    int array[n];   // Declarar el array
+
+    srand(time(0)); // Establecer una semilla para la función rand()
+
+    // se llena el el array con números aleatorios
+    for (int i = 0; i < n; i++)   {
+        arreglo[i] = generarAleatorio();
+    }
+
+    int *puntero = arreglo; // Declarar un puntero y asignarle el array
+
+    
+    cout << "contenido del array: ";
+    for (int i = 0; i < n; i++)// Imprimir el contenido del array usando el puntero
+    {
+        cout << *puntero << " "; 
+        puntero++;              
+    }
+    cout << endl;
+
+
+    // Imprimir las direcciones del contenido del array usando el puntero
+    cout << " direcciones del contenido del array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << puntero << " "; 
+        puntero++;             
+    }
+    cout << endl;
+
+    return 0;
+}
+
+int generarAleatorio()
+{
+    return rand() % 50; // Generar un número aleatorio entre 0 y 50
+}
